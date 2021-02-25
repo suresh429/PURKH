@@ -4,6 +4,14 @@ android {
 
    
   
+    signingConfigs {
+        release {
+            storeFile file('E:\\Android projects\\Omics Projects\\PURKH\\jks\\purkh.jks')
+            storePassword 'purkh@123'
+            keyAlias 'purkh'
+            keyPassword 'purkh@123'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion '30.0.2'
 
@@ -15,7 +23,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        
+        signingConfig signingConfigs.release
 
 
     }
